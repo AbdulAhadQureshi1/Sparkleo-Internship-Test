@@ -1,8 +1,10 @@
+import Navbar from "./Navbar"
+import '../App.css'
 function App() {
 
   return (
     <>
-      Hello World
+      <Navbar/>
     </>
   )
 }
