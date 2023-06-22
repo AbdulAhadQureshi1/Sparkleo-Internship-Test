@@ -9,6 +9,16 @@
 :root {
   --primary-color: #379dfb;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
 .navbar {
   background-color: var(--primary-color);
   color: white;
@@ -17,6 +27,7 @@
   align-items: center;
   padding: 0rem 4rem;
   height: 100px;
+  width: 100%;
 }
 .navbar h1 {
   font-family: Poppins;
@@ -28,13 +39,114 @@
 }
 
 .hamburger {
-    display: none;
+  display: none;
 }
+
+.input-set {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.input-set label {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.input-set .req-mark {
+  color: red;
+}
+
+.input-set input {
+  width: 572px;
+  height: 42px;
+  top: 129px;
+  left: 226px;
+  border-radius: 5px;
+  border: none;
+  /* USE SHADOW INSTEAD OF BORDER */
+  box-shadow: 0px 0px 0px 1px var(--primary-color);
+  font-size: 20px;
+}
+.input-set input:focus {
+  outline: 0;
+  box-shadow: 0px 0px 0px 2px var(--primary-color);
+}
+
+.form-wrapper {
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  width: 80vw;
+  max-width: 866px;
+}
+
+.form-wrapper h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.form-wrapper form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.btn-set {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-set > * {
+    cursor: pointer;
+}
+
+.submit-btn {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  padding: 10px 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+.clr-btn {
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
 @media screen and (max-width: 550px) {
-    .hamburger {
-        display: flex;
-    }
-    .navbar h1 {
-        display: none;
-    }
+  .hamburger {
+    display: flex;
+  }
+  .navbar h1 {
+    display: none;
+  }
 }
