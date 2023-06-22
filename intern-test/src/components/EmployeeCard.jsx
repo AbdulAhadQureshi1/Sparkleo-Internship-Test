@@ -1,5 +1,5 @@
 import btn from '../assets/coolicon.png'
-function EmployeeCard(props) {
+function EmployeeCard() {
   return (
     <div className="card">
       <div className="text">
