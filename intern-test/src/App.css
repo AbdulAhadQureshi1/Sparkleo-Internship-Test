@@ -73,6 +73,7 @@
   /* USE SHADOW INSTEAD OF BORDER */
   box-shadow: 0px 0px 0px 1px var(--primary-color);
   font-size: 20px;
+  padding: 0px 10px;
 }
 .input-set input:focus {
   outline: 0;
@@ -84,6 +85,7 @@
   border: 2px solid var(--primary-color);
   width: 80vw;
   max-width: 866px;
+  margin: 5rem 0px;
 }
 
 .form-wrapper h2 {
@@ -114,7 +116,7 @@
 }
 
 .btn-set > * {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .submit-btn {
@@ -142,11 +144,75 @@
   text-align: center;
 }
 
+.footer {
+  background-color: var(--primary-color);
+  min-height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0px;
+}
+.wrapper {
+  width: 55%;
+}
+.wrapper h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  background-color: #276eb0;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 7px;
+}
+
+.text > h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.text > p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.delete-btn img {
+  width: 32px;
+}
+
+@media screen and (max-width: 750px)  {
+    .wrapper {
+        width: 90%;
+    }
+}
 @media screen and (max-width: 550px) {
   .hamburger {
     display: flex;
   }
   .navbar h1 {
     display: none;
+  }
+  .form-wrapper {
+    width: 90%;
   }
 }
