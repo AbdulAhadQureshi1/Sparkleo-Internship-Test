@@ -155,6 +155,7 @@
 }
 .wrapper {
   width: 55%;
+  color: white;
 }
 .wrapper h2 {
   color: white;
@@ -175,6 +176,7 @@
   color: white;
   padding: 1.5rem 3rem;
   border-radius: 7px;
+  margin-bottom: 1rem;
 }
 
 .text > h2 {

@@ -1,7 +1,12 @@
 import { InputSet } from "./InputSet";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function Form() {
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
+export default function Form(props) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,10 +34,20 @@ export default function Form() {
     setEmail("");
     setPhone("");
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newUser = {
+      name: firstName + lastName,
+      email: email,
+      phone: phone,
+    }
+    props.onSubmit(newUser);
+  }
   return (
     <section className="form-wrapper">
       <h2>New Employee</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <InputSet
           label="First Name"
           value={firstName}
