@@ -2,7 +2,7 @@ import Navbar from "./Navbar"
 import Form from "./Form"
 import '../App.css'
 import Footer from "./Footer"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 function App() {
   const [users, setUsers] = useState([]);
   const updateUsers = (newUser) => {
